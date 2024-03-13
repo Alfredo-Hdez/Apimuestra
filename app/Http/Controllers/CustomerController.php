@@ -38,10 +38,16 @@ class CustomerController extends Controller
 
     /**
      * Store a newly created resource in storage.
+     * 
+     * This method is used to store a new customer in the database.
+     * The StoreCustomerRequest class is used to validate the incoming request.
+     * If the request is valid, the new customer is created and returned as a resource.
+     * 
      */
     public function store(StoreCustomerRequest $request)
     {
         //
+        return new CustomerResource(Customer::create($request->all()));
     }
 
     /**
@@ -71,6 +77,7 @@ class CustomerController extends Controller
     public function update(UpdateCustomerRequest $request, Customer $customer)
     {
         //
+        @$customer->update($request->all());
     }
 
     /**
