@@ -40,6 +40,9 @@ class InvoiceController extends Controller
 
     /**
      * Store a newly created resource in storage.
+     * se almacenan las facturas en la base de datos 
+     * se utiliza el metodo insert para insertar multiples registros
+     * se convierten los datos a un array
      */
     public function store(StoreInvoiceRequest $request)
     {

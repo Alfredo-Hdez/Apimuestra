@@ -9,7 +9,8 @@ class CustomerResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
-     *
+     *Se transforma el recurso en un array
+     *todo esto en formato json
      * @return array<string, mixed>
      */
     public function toArray(Request $request): array

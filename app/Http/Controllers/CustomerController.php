@@ -52,6 +52,9 @@ class CustomerController extends Controller
 
     /**
      * Display the specified resource.
+     * se utiliza loadmissing para cargar los datos faltantes
+     * El query string includeInvoices se utiliza para cargar
+     * las facturas asociadas con el cliente.
      */
     public function show(Customer $customer)
     {
@@ -73,6 +76,7 @@ class CustomerController extends Controller
 
     /**
      * Update the specified resource in storage.
+     * se actualiza el cliente con los datos del request
      */
     public function update(UpdateCustomerRequest $request, Customer $customer)
     {

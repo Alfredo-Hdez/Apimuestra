@@ -5,6 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+/*
+*Se crea clase con el nombre de Customer
+*Se utiliza el trait HasFactory
+*Se define el nombre de la tabla en la base de datos
+*Se define los campos que se pueden llenar en la base de datos
+*Se define la relación uno a muchos con la tabla de facturas
+*/
 class Customer extends Model
 {
     use HasFactory;

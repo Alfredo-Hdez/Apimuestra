@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Barryvdh\DomPDF\Facade\Pdf;
+use Illuminate\Support\Facades\App;
+use App\Http\Controllers\ProjectController;
 
 //
 //
@@ -38,7 +43,17 @@ Route::get('/setup', function(){
         ];
     }
 });
-Route::view('/', 'home')->name('home');
+Route::get('/', function(){
+    //PRimera forma
+    // $pdf = App::make('dompdf.wrapper');
+    // $pdf->loadHTML('<h1>PDF for Test</h1>');
+    //Segunda forma
+    // $pdf = app('dompdf.wrapper');
+    // $pdf->loadHTML('<h1>PDF test from helper app</h1>');
+    $pdf = Pdf::loadHTML('<h1>PDF test with facade Pdf</h1>');
+    return $pdf->stream();
+});
+// Route::view('/', 'home')->name('home');
 Route::view('/about', 'about')->name('about');
 Route::view('/portfolio', 'PortfolioController@index')->name('portfolio');
 Route::view('/contact', 'contact')->name('contact');

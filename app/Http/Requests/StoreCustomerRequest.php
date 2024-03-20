@@ -17,6 +17,7 @@ class StoreCustomerRequest extends FormRequest
 
     /**
      * Get the validation rules that apply to the request.
+     *Se definen las reglas de validación para el request
      *
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
      */

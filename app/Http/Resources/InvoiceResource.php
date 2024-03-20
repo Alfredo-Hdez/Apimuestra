@@ -9,7 +9,7 @@ class InvoiceResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
-     *
+     *se definen parametros para transformar el recursos en un array
      * @return array<string, mixed>
      */
     public function toArray(Request $request): array
